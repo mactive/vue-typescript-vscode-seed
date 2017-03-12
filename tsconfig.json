@@ -18,7 +18,7 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         //监听变更
-        // "watch": true,
+        "watch": true,
         //代码可以使用es标准
         "lib": ["dom","es2015"],
         //编译目标

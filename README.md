@@ -11,8 +11,19 @@
 ## Build Setup
 
 ``` bash
+
 # install dependencies
 npm install
+
+# make sure you have typescript cli global and typings
+npm install typescript -g
+npm install typings -g
+
+# install typescript typings
+npm run typings
+> vue2 不需要在安装typings, npm包里面已经有了
+> typings install dt~node --global --save
+> typings install dt~jquery --global --save
 
 # serve with hot reload at localhost:4040
 npm run dev

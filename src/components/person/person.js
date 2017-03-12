@@ -21,7 +21,7 @@ var App = (function (_super) {
         _this.msg = 123;
         _this.pakName = {
             name: "2323",
-            time: "21232"
+            ddd: "2323"
         };
         // use prop values for initial data
         _this.helloMsg = 'Hello, ' + _this.propMessage;
@@ -57,7 +57,7 @@ App = __decorate([
         props: {
             propMessage: String
         },
-        template: "<h1>TTTT</h1>"
+        template: require('./person.html')
     })
 ], App);
 Object.defineProperty(exports, "__esModule", { value: true });

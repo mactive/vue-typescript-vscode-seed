@@ -10,18 +10,19 @@ interface Person{
   props: {
     propMessage: String
   },
-  template: `<h1>TTTT</h1>`
+  template: require('./person.html')
 })
 
+
 export default class App extends Vue {
-  name = 'person';
+  name = 'person'
   propMessage: string
 
   // inital data
   msg: number = 123
   pakName: Person = {
-    name: "2323",
-    time: "21232"
+    name: "2323"
+    ddd: "2323"
   }
 
   // use prop values for initial data
