@@ -12,46 +12,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var vue_1 = require("vue");
 var vue_class_component_1 = require("vue-class-component");
-require('./person.css');
+var person_1 = require("./components/person/person");
+require('./AppTs.css');
+console.log(person_1.default);
 // 装饰器
 var App = (function (_super) {
     __extends(App, _super);
     function App() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.name = 'person';
-        // inital data
-        _this.msg = 123;
-        _this.pakName = {
-            name: "2323",
-            time: "2323"
-        };
-        // use prop values for initial data
-        _this.helloMsg = 'Hello, ' + _this.propMessage;
+        _this.name = 'app';
         return _this;
     }
-    // lifecycle hook
-    App.prototype.mounted = function () {
-        this.greet();
-    };
-    Object.defineProperty(App.prototype, "computedMsg", {
-        // computed
-        get: function () {
-            return 'computed ' + this.msg;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(App.prototype, "computedName", {
-        get: function () {
-            return 'computed ' + this.pakName.name;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    // method
-    App.prototype.greet = function () {
-        console.log('greeting: ' + this.msg);
-    };
     return App;
 }(vue_1.default));
 App = __decorate([
@@ -59,7 +30,10 @@ App = __decorate([
         props: {
             propMessage: String
         },
-        template: require('./person.html')
+        components: {
+            Person: person_1.default
+        },
+        template: require('./AppTs.html')
     })
 ], App);
 Object.defineProperty(exports, "__esModule", { value: true });

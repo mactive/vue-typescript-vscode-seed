@@ -1,11 +1,18 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
+require('./person.css')
 
+/**
+ * types & interface
+ * 
+ * @interface Person
+ */
 interface Person{
   name: string;
   time?: string;
 }
 
+// 装饰器
 @Component({
   props: {
     propMessage: String
@@ -21,8 +28,8 @@ export default class App extends Vue {
   // inital data
   msg: number = 123
   pakName: Person = {
-    name: "2323"
-    ddd: "2323"
+    name: "2323",
+    time: "2323"
   }
 
   // use prop values for initial data

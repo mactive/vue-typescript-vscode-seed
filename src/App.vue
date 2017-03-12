@@ -2,17 +2,16 @@
   <div id="app">
     <img src="./assets/logo.png">
     <person></person>
-    <hello></hello>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+// import Hello from './components/Hello'
 import Person from './components/person/person'
 export default {
   name: 'app',
   components: {
-    Hello,
+    // Hello,
     Person
   }
 }
@@ -26,9 +25,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
 }
 </style>

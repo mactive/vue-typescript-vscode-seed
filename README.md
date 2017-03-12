@@ -1,11 +1,14 @@
 # vue-typescript-vscode-seed
 
-> vue2 + typescript2 + webpack + av-ts 装饰器
+> vue2 + typescript2 + webpack + vue-class-component(官方) 装饰器
 > typescript module load template 
 > package document without vue single file template
 
 - [ ] component/plugin/directive example
 - [ ] vuex integration
+- [ ] less/sass 依赖关系和整合 ts + webpack require
+- [ ] 更多的注解使用方式 / 不需要注解的写法
+- [ ] 尝试 av-ts
 
 
 ## Build Setup

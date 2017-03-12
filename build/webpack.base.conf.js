@@ -19,7 +19,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.html', '.scss', '.sass',],
+    extensions: ['.js', '.vue', '.json', '.html', '.css', '.scss', '.sass',],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -35,9 +35,17 @@ module.exports = {
         //   appendTsSuffixTo: [/\.vue$/]
         // }
       },
+      // Support for CSS as raw text
+      { 
+        test: /\.css$/,
+        include: [
+          path.resolve(__dirname, "not_exist_path")
+        ],
+        loaders: [ 'style-loader', 'css-loader' ]
+      },
       { 
         test: /\.(scss|sass)$/, 
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       // support for .html as raw text
       { 
@@ -45,11 +53,14 @@ module.exports = {
         loader: 'raw-loader', 
         exclude: [ ] 
       },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig
-      },
+      // 
+      // {
+      //   test: /\.vue$/,
+      //   loader: 'vue-loader',
+      //   options: vueLoaderConfig
+      // },
+      //
+      // we have typescript so we don't need babel
       // {
       //   test: /\.js$/,
       //   loader: 'babel-loader',
