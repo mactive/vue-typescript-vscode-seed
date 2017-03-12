@@ -1,6 +1,12 @@
 # vue-typescript-vscode-seed
 
-> vue2 typescript2 ts module load no vue file
+> vue2 + typescript2 + webpack + av-ts 装饰器
+> typescript module load template 
+> package document without vue single file template
+
+- [ ] component/plugin/directive example
+- [ ] vuex integration
+
 
 ## Build Setup
 
