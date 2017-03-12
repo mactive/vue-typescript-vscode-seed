@@ -1,45 +1,30 @@
-import Vue from 'vue'
 import Component from 'vue-class-component'
+import Vue from 'vue'
 
-interface Person{
-  name: string;
-  time?: string;
-}
 
 @Component({
   props: {
     propMessage: String
   },
-  template: `<h1>TTTT</h1>`
+  template: require('./person.html')
 })
-
 export default class App extends Vue {
-  propMessage: string
-
-  // inital data
-  msg: number = 123
-  pakName: Person = {
-    name: "2323",
-    time: "21232"
-  }
-
+  // initial data
+  msg = 123
+ 
   // use prop values for initial data
-  helloMsg: string = 'Hello, ' + this.propMessage
-
+  helloMsg = 'Hello, ' + this.propMessage
+ 
   // lifecycle hook
   mounted () {
     this.greet()
   }
-
+ 
   // computed
   get computedMsg () {
     return 'computed ' + this.msg
   }
-
-  get computedName () {
-    return 'computed ' + this.pakName.name
-  }
-
+ 
   // method
   greet () {
     console.log('greeting: ' + this.msg)

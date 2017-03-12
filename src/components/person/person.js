@@ -10,33 +10,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var av_ts_1 = require("av-ts");
-var HomeComponent = (function (_super) {
-    __extends(HomeComponent, _super);
-    function HomeComponent() {
+var vue_1 = require("vue");
+var vue_class_component_1 = require("vue-class-component");
+var App = (function (_super) {
+    __extends(App, _super);
+    function App() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.name = 'Rem';
-        _this.cnt = 0;
+        // inital data
+        _this.msg = 123;
+        _this.pakName = {
+            name: "2323",
+            time: "21232"
+        };
+        // use prop values for initial data
+        _this.helloMsg = 'Hello, ' + _this.propMessage;
         return _this;
     }
-    Object.defineProperty(HomeComponent.prototype, "count", {
+    // lifecycle hook
+    App.prototype.mounted = function () {
+        this.greet();
+    };
+    Object.defineProperty(App.prototype, "computedMsg", {
+        // computed
         get: function () {
-            return this.cnt > 0 ? this.cnt : 0;
+            return 'computed ' + this.msg;
         },
         enumerable: true,
         configurable: true
     });
-    HomeComponent.prototype.add = function () {
-        this.cnt += 1;
+    Object.defineProperty(App.prototype, "computedName", {
+        get: function () {
+            return 'computed ' + this.pakName.name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    // method
+    App.prototype.greet = function () {
+        console.log('greeting: ' + this.msg);
     };
-    HomeComponent.prototype.sub = function () {
-        this.cnt -= 1;
-    };
-    return HomeComponent;
-}(av_ts_1.Vue));
-HomeComponent = __decorate([
-    av_ts_1.Component({
-        template: require('./person.html')
+    return App;
+}(vue_1.default));
+App = __decorate([
+    vue_class_component_1.default({
+        props: {
+            propMessage: String
+        },
+        template: "<h1>TTTT</h1>"
     })
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
+], App);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = App;
