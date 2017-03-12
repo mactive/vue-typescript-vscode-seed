@@ -16,6 +16,7 @@ var App = (function (_super) {
     __extends(App, _super);
     function App() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.name = 'person';
         // inital data
         _this.msg = 123;
         _this.pakName = {

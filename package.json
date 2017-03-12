@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "av-ts": "^0.7.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "raw-loader": "^0.5.1",
     "vue": "^2.2.2",
     "vue-class-component": "^5.0.0"

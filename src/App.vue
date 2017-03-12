@@ -8,7 +8,7 @@
 
 <script>
 import Hello from './components/Hello'
-import  Person from './components/person/person'
+import Person from './components/person/person'
 export default {
   name: 'app',
   components: {

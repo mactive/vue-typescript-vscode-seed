@@ -14,6 +14,7 @@ interface Person{
 })
 
 export default class App extends Vue {
+  name = 'person';
   propMessage: string
 
   // inital data

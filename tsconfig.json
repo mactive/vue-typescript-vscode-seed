@@ -18,9 +18,9 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         //监听变更
-        "watch": true,
+        // "watch": true,
         //代码可以使用es标准
-        "lib": ["dom","es6","es2015"],
+        "lib": ["dom","es2015"],
         //编译目标
         "target": "es5",
         //生成.map文件
@@ -32,7 +32,9 @@
         "declaration": false,
         "noImplicitAny": true,
         // 未知
-        "suppressImplicitAnyIndexErrors": true
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true
     },
     "exclude": [
         //忽略安装的第三方NPM模块的定义文件
@@ -40,5 +42,8 @@
         //忽略typings安装的browser文件夹下的.d.ts定义文件
         "typings/browser.d.ts",
         "typings/browser"
+    ],
+    "include": [
+        "./**/*.ts"
     ]
 }
