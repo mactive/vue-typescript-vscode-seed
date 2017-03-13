@@ -19,6 +19,7 @@ var App = (function (_super) {
     function App() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.name = 'person';
+        _this.propMessage = "ddd";
         // inital data
         _this.msg = 123;
         _this.pakName = {
@@ -32,6 +33,7 @@ var App = (function (_super) {
     // lifecycle hook
     App.prototype.mounted = function () {
         this.greet();
+        this.propMessage;
     };
     Object.defineProperty(App.prototype, "computedMsg", {
         // computed
@@ -59,7 +61,11 @@ App = __decorate([
         props: {
             propMessage: String
         },
-        template: require('./person.html')
+        template: require('./person.html'),
+        mixins: [],
+        data: {
+            personGroup: String
+        }
     })
 ], App);
 Object.defineProperty(exports, "__esModule", { value: true });

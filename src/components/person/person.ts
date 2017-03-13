@@ -17,13 +17,18 @@ interface Person{
   props: {
     propMessage: String
   },
-  template: require('./person.html')
+  template: require('./person.html'),
+  mixins:[],
+  data: {
+    personGroup: String
+  }
 })
 
 
 export default class App extends Vue {
   name = 'person'
-  propMessage: string
+  propMessage: string = "ddd"
+  
 
   // inital data
   msg: number = 123
@@ -32,12 +37,15 @@ export default class App extends Vue {
     time: "2323"
   }
 
+  
+
   // use prop values for initial data
   helloMsg: string = 'Hello, ' + this.propMessage
 
   // lifecycle hook
   mounted () {
     this.greet()
+    this.propMessage
   }
 
   // computed

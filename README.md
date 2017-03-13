@@ -10,6 +10,24 @@
 - [ ] 更多的注解使用方式 / 不需要注解的写法
 - [ ] 尝试 av-ts
 
+## 另一个尝试的方向
+
+(vue-typescript-component)[https://github.com/locoslab/vue-typescript-component],
+将编译好的 *.ts 文件引入 .vue文件中
+
+不过最好是基于webpack栈的,受众会比较广一些.
+
+```html
+<template>
+...
+</template>
+
+<script>
+module.exports = require('./example.ts').default.vueComponentOptions
+</script>
+```
+
+
 
 ## Build Setup
 
