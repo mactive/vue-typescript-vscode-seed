@@ -12,7 +12,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var vue_1 = require("vue");
 var vue_class_component_1 = require("vue-class-component");
-require('./person.css');
+require('./person.scss');
 // 装饰器
 var App = (function (_super) {
     __extends(App, _super);

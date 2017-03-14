@@ -1,7 +1,7 @@
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
-var vueLoaderConfig = require('./vue-loader.conf')
+// var vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -19,7 +19,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.html', '.css', '.scss', '.sass',],
+    extensions: ['.js', '.vue', '.json', '.html', '.css', '.scss', '.sass'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -36,17 +36,33 @@ module.exports = {
         // }
       },
       // Support for CSS as raw text
-      { 
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, "not_exist_path")
-        ],
-        loaders: [ 'style-loader', 'css-loader' ]
-      },
-      { 
-        test: /\.(scss|sass)$/, 
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
-      },
+      // { 
+      //   test: /\.css$/,
+      //   include: [
+      //     path.resolve(__dirname, "not_exist_path")
+      //   ],
+      //   loaders: [ 'style-loader', 'css-loader' ]
+      // },
+      // {
+      //   test: /\.less$/,
+      //   use: [{
+      //       loader: "style-loader" // creates style nodes from JS strings
+      //   }, {
+      //       loader: "css-loader" // translates CSS into CommonJS
+      //   }, {
+      //       loader: "less-loader" // compiles Less to CSS
+      //   }]
+      // },
+      // {
+      //   test: /\.(scss|sass)$/,
+      //   use: [{
+      //       loader: "style-loader" // creates style nodes from JS strings
+      //   }, {
+      //       loader: "css-loader" // translates CSS into CommonJS
+      //   }, {
+      //       loader: "sass-loader" // compiles Sass to CSS
+      //   }]
+      // },
       // support for .html as raw text
       { 
         test: /\.html$/, 

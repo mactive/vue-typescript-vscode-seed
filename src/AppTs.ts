@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Component from 'vue-class-component'
 import Person from './components/person/person'
 
-require('./AppTs.css');
+require('./AppTs.less');
 console.log(Person);
 // 装饰器
 @Component({

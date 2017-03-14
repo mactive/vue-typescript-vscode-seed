@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
-require('./person.css')
+require('./person.scss')
 
 /**
  * types & interface
