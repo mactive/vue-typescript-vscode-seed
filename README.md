@@ -4,11 +4,12 @@
 > typescript module load template 
 > package document without vue single file template
 
+- [ ] less/sass 依赖关系和整合 ts + webpack require
+- [ ] 1.1 尝试 av-ts
+- [ ] 1.2 尝试.vue文件中引入 ts文件
 - [ ] component/plugin/directive example
 - [ ] vuex integration
-- [ ] less/sass 依赖关系和整合 ts + webpack require
 - [ ] 更多的注解使用方式 / 不需要注解的写法
-- [ ] 尝试 av-ts
 
 ## 另一个尝试的方向
 
